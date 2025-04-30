@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sito Stile Apple</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#vendite">Home</a></li>
+      <li><a href="#qualita">Prodotti</a></li>
+      <li><a href="#prezzo">Chi siamo</a></li>
+      <li><a href="#">Carrello</a></li>
+      <li><a href="#">Le nostre offerte</a></li>
+    </ul>
+  </nav>
+
+  <div class="home-wrapper">
+    <!-- Sezione già esistente: quantità di prodotti, qualità, e prezzi -->
+    <div class="home-top">
+      <div class="card">
+        <h3>Quantità di Prodotti Venduti</h3>
+        <p>
+          Ogni anno, migliaia di prodotti vengono venduti con la nostra marca. La nostra crescita continua è il risultato di
+          un impegno costante nel fornire ai nostri clienti articoli di alta qualità. Ogni prodotto venduto rappresenta la
+          fiducia che i nostri clienti ripongono nel nostro marchio.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Qualità dei Prodotti</h3>
+        <p>
+          I nostri prodotti sono fabbricati con i migliori materiali e sono progettati per resistere nel tempo. Ogni
+          componente è testato accuratamente per garantire che rispetti gli standard più elevati di qualità.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Sezione esistente: perché costano di più -->
+    <div class="home-bottom">
+      <h2>Perché i nostri prodotti costano di più</h2>
+      <p>
+        La nostra politica dei prezzi è il risultato di un impegno senza compromessi nella qualità dei materiali e
+        della produzione. Non ci limitiamo a produrre articoli economici, ma ci concentriamo sulla creazione di
+        prodotti che abbiano una lunga durata e che offrano prestazioni superiori.
+      </p>
+    </div>
+  
+    <!-- Nuova sezione con lista di prodotti Apple -->
+    <div class="products-list" id="products-list">
+      <h2>I prodotti Apple</h2>
+      <ul>
+        <li>iPhone</li>
+        <li>iPad</li>
+        <li>MacBook</li>
+        <li>Apple Watch</li>
+        <li>AirPods</li>
+        <li>iMac</li>
+        <li>Mac Pro</li>
+        <li>Apple TV</li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    // Funzione per controllare quando la sezione è visibile
+    window.addEventListener('scroll', function() {
+      var productsList = document.getElementById('products-list');
+      var rect = productsList.getBoundingClientRect();
+      
+      if (rect.top < window.innerHeight && rect.bottom >= 0) {
+        // Aggiungi la classe per far apparire l'elemento
+        productsList.classList.add('visible');
+      }
+    });
+  </script>
+    
+</body>
+</html>

@@ -1,0 +1,125 @@
+/* BASE */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #1a1a1a; /* Grigio molto scuro */
+    color: white;
+    scroll-behavior: smooth;
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #121212;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    z-index: 1000;
+  }
+  
+  .navbar ul {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .navbar li {
+    margin: 0 15px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+  
+  /* Hover sui link navbar */
+  .navbar a:hover {
+    transform: scale(1.1);
+    color: #2c6e49; /* Colore verde scuro */
+  }
+  
+  /* HOME */
+  .home-wrapper {
+    padding-top: 80px;
+  }
+  
+  .home-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+  }
+  
+  /* Sezioni con sfondo beige chiaro, bordi e margini laterali */
+  .card {
+    flex: 1 1 300px;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: #dcd2c6; /* Beige chiaro con un tocco di grigio */
+    border: 2px solid #444; /* Bordi sottili scuri */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    color: black; /* Testo nero per miglior contrasto */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 20px; /* Margini laterali */
+  }
+  
+  /* Hover sulla card */
+  .card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  }
+  
+  /* Colore accento per la sezione prezzo */
+  .home-bottom {
+    padding: 60px 20px;
+    background-color: #dcd2c6; /* Beige chiaro per contrasto */
+    color: black;
+    text-align: center;
+    border: 2px solid #444; /* Bordi sottili scuri */
+    border-radius: 12px; /* Bordo arrotondato */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 20px; /* Margini laterali */
+  }
+  
+  .home-bottom:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  }
+  
+  .home-bottom h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Colore accento per il testo di prezzo */
+  .home-bottom p {
+    color: black; /* Testo nero */
+  }
+  
+ /* Sezione con la lista dei prodotti Apple */
+.products-list {
+    padding: 60px 20px;
+    background-color: #dcd2c6; /* Beige chiaro per contrasto */
+    color: black;
+    text-align: center;
+    border: 2px solid #444; /* Bordi sottili scuri */
+    border-radius: 12px; /* Bordo arrotondato */
+    margin: 40px 20px 0 20px; /* Aggiungi margine superiore di 40px */
+    opacity: 0; /* Partiamo con la sezione invisibile */
+    transform: translateY(50px); /* Partiamo con la sezione spostata verso il basso */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Animazione di apparizione */
+    width: auto; /* Larghezza automatica per adattarsi al contenuto */
+    max-width: 800px; /* Massima larghezza per evitare che diventi troppo larga */
+    margin-left: auto;
+    margin-right: auto; /* Centrato orizzontalmente */
+list-style: none;  }
+  
+  .products-list.visible {
+    opacity: 1; /* Rende la sezione visibile */
+    transform: translateY(0); /* Sposta la sezione alla posizione originale */
+  }
+  
